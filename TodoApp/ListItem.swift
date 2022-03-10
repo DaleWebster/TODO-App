@@ -1,11 +1,12 @@
 //
-//  List.swift
+//  ListItem.swift
 //  TodoApp
 //
-//  Created by Sam Ali on 01/03/2022.
+//  Created by Sam Ali on 10/03/2022.
 //
 
 import Foundation
+
 
 public struct ListItem: Codable{
     

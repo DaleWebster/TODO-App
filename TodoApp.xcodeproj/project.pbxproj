@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		C53B1CAD27D8EEEC006C50B1 /* ListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A0E6A427D8E7E50095A00D /* ListCoordinator.swift */; };
+		C53B1CB327DA1DD0006C50B1 /* ListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C53B1CB227DA1DD0006C50B1 /* ListItem.swift */; };
+		C53B1CB527DA1E37006C50B1 /* UIViewController+Children.swift in Sources */ = {isa = PBXBuildFile; fileRef = C53B1CB427DA1E37006C50B1 /* UIViewController+Children.swift */; };
 		C5A0E6A827D8EA4D0095A00D /* UIView+AutoLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A0E6A727D8EA4D0095A00D /* UIView+AutoLayout.swift */; };
 		C5A0E6AA27D8EB300095A00D /* uiViewController+ChildrenExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A0E6A927D8EB300095A00D /* uiViewController+ChildrenExtension.swift */; };
 		C5A0E6AC27D8EBCB0095A00D /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A0E6AB27D8EBCB0095A00D /* ListViewController.swift */; };
@@ -43,6 +45,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C53B1CB227DA1DD0006C50B1 /* ListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ListItem.swift; path = TodoApp/ListItem.swift; sourceTree = "<group>"; };
+		C53B1CB427DA1E37006C50B1 /* UIViewController+Children.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UIViewController+Children.swift"; path = "TodoApp/UIViewController+Children.swift"; sourceTree = "<group>"; };
 		C5A0E6A427D8E7E50095A00D /* ListCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCoordinator.swift; sourceTree = "<group>"; };
 		C5A0E6A727D8EA4D0095A00D /* UIView+AutoLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+AutoLayout.swift"; sourceTree = "<group>"; };
 		C5A0E6A927D8EB300095A00D /* uiViewController+ChildrenExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "uiViewController+ChildrenExtension.swift"; sourceTree = "<group>"; };
@@ -93,6 +97,8 @@
 		CA0F2D2527BFDD6D00BCA633 = {
 			isa = PBXGroup;
 			children = (
+				C53B1CB427DA1E37006C50B1 /* UIViewController+Children.swift */,
+				C53B1CB227DA1DD0006C50B1 /* ListItem.swift */,
 				CA0F2D4727BFDD6E00BCA633 /* TodoAppTests */,
 				CA0F2D5127BFDD6E00BCA633 /* TodoAppUITests */,
 				CA0F2D2F27BFDD6D00BCA633 /* Products */,
@@ -326,10 +332,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C53B1CB327DA1DD0006C50B1 /* ListItem.swift in Sources */,
 				CA0F2D6827BFDEC300BCA633 /* AppContext.swift in Sources */,
 				C5A0E6A827D8EA4D0095A00D /* UIView+AutoLayout.swift in Sources */,
 				CA0F2D3227BFDD6D00BCA633 /* AppDelegate.swift in Sources */,
 				CA0F2D6C27BFDEF200BCA633 /* ViewControllerFactory.swift in Sources */,
+				C53B1CB527DA1E37006C50B1 /* UIViewController+Children.swift in Sources */,
 				CA0F2D3427BFDD6D00BCA633 /* SceneDelegate.swift in Sources */,
 				C5A0E6AC27D8EBCB0095A00D /* ListViewController.swift in Sources */,
 				CA346AF627BFDF78007BA151 /* ServiceContainer.swift in Sources */,
