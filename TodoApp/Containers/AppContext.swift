@@ -15,7 +15,8 @@ struct AppContext {
         let serviceContainer = AppServiceContainer(dataAccessContainer: dataAccessContainer)
         let viewModelFactory = AppViewModelFactory(serviceContainer: serviceContainer)
         let viewControllerFactory = AppViewControllerFactory(viewModelFactory: viewModelFactory)
+        let listViewController = ListViewController()
         
-        coordinatorFactory = AppCoordinatorFactory(viewControllerFactory: viewControllerFactory)
+        coordinatorFactory = AppCoordinatorFactory(viewControllerFactory: viewControllerFactory, listViewController: listViewController)
     }
 }
