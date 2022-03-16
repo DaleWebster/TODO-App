@@ -14,15 +14,14 @@ protocol CoordinatorFactory {
 
 struct AppCoordinatorFactory: CoordinatorFactory {
     private let viewControllerFactory: ViewControllerFactory
-    private let listViewController: ListViewController
     
-    init(viewControllerFactory: ViewControllerFactory, listViewController: ListViewController) {
+    init(viewControllerFactory: ViewControllerFactory) {
         self.viewControllerFactory = viewControllerFactory
-        self.listViewController = listViewController
     }
     
     func list() -> UIViewController {
-        let listViewController = ListCoordinator(viewControllerFactory: viewControllerFactory, listViewController: listViewController)
+        let listViewController = ListCoordinator(viewControllerFactory: viewControllerFactory)
+        
         return listViewController
     }
 }

@@ -10,17 +10,17 @@ import UIKit
 class ListViewController: UIViewController,UITableViewDataSource,UITableViewDelegate {
  
     
+    var viewModel: ListViewModelProtocol!
+    // this hard coded bit need to go to listviewmodel
+   // var todoListArray: [String]
     
-    let todoListArray = ["Go shopping", "Eat some carrots", "Argue with dogs", "Make parents proud", "Build this awesome app", "Live forever"]
-   
-    let cellId = "ListCell"
-
     var listTableView = UITableView()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+       
         // Do any additional setup after loading the view, typically from a nib.
-        self.listTableView.register(UITableViewCell.self, forCellReuseIdentifier: cellId)
+        self.listTableView.register(UITableViewCell.self, forCellReuseIdentifier: viewModel.cellId)
     
         listTableView.frame = self.view.frame
         self.view.addSubview(listTableView)
@@ -28,23 +28,26 @@ class ListViewController: UIViewController,UITableViewDataSource,UITableViewDele
         listTableView.delegate = self
         listTableView.dataSource = self
 
+       
     
     }
-
+    
 
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = listTableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath)
+       
+        let cell = listTableView.dequeueReusableCell(withIdentifier: viewModel.cellId, for: indexPath)
         let row = indexPath.row
-        cell.textLabel?.text = todoListArray[row]
+        cell.textLabel?.text = viewModel.listArray[row]
         return cell
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return todoListArray.count
+        
+        return viewModel.listArray.count
     }
 
 
@@ -52,7 +55,7 @@ class ListViewController: UIViewController,UITableViewDataSource,UITableViewDele
         listTableView.deselectRow(at: indexPath, animated: true)
     
         let row = indexPath.row
-        print(todoListArray[row])
+        print(viewModel.listArray[row])
     }
 
 

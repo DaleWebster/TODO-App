@@ -7,12 +7,20 @@
 
 import Foundation
 
-protocol ViewModelFactory {}
+protocol ViewModelFactory {
+    func listViewModel() -> ListViewModelProtocol
+}
 
 struct AppViewModelFactory: ViewModelFactory {
     private let serviceContainer: ServiceContainer
     
     init(serviceContainer: ServiceContainer) {
         self.serviceContainer = serviceContainer
+    }
+    
+    func listViewModel() -> ListViewModelProtocol {
+        let listViewModel = ListViewModel()
+        
+        return listViewModel
     }
 }

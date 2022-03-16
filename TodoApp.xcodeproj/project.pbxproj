@@ -8,8 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		C53B1CAD27D8EEEC006C50B1 /* ListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A0E6A427D8E7E50095A00D /* ListCoordinator.swift */; };
-		C53B1CB327DA1DD0006C50B1 /* ListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C53B1CB227DA1DD0006C50B1 /* ListItem.swift */; };
 		C53B1CB527DA1E37006C50B1 /* UIViewController+Children.swift in Sources */ = {isa = PBXBuildFile; fileRef = C53B1CB427DA1E37006C50B1 /* UIViewController+Children.swift */; };
+		C53B1CB727DA4000006C50B1 /* ListViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C53B1CB627DA4000006C50B1 /* ListViewModelProtocol.swift */; };
+		C53B1CB927DA426E006C50B1 /* ListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C53B1CB827DA426E006C50B1 /* ListService.swift */; };
+		C53B1CBB27DA4366006C50B1 /* ListServiceRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = C53B1CBA27DA4366006C50B1 /* ListServiceRepository.swift */; };
+		C53B1CBD27DA4442006C50B1 /* List.swift in Sources */ = {isa = PBXBuildFile; fileRef = C53B1CBC27DA4442006C50B1 /* List.swift */; };
 		C5A0E6A827D8EA4D0095A00D /* UIView+AutoLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A0E6A727D8EA4D0095A00D /* UIView+AutoLayout.swift */; };
 		C5A0E6AA27D8EB300095A00D /* uiViewController+ChildrenExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A0E6A927D8EB300095A00D /* uiViewController+ChildrenExtension.swift */; };
 		C5A0E6AC27D8EBCB0095A00D /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A0E6AB27D8EBCB0095A00D /* ListViewController.swift */; };
@@ -45,8 +48,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		C53B1CB227DA1DD0006C50B1 /* ListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ListItem.swift; path = TodoApp/ListItem.swift; sourceTree = "<group>"; };
-		C53B1CB427DA1E37006C50B1 /* UIViewController+Children.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UIViewController+Children.swift"; path = "TodoApp/UIViewController+Children.swift"; sourceTree = "<group>"; };
+		C53B1CB427DA1E37006C50B1 /* UIViewController+Children.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Children.swift"; sourceTree = "<group>"; };
+		C53B1CB627DA4000006C50B1 /* ListViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModelProtocol.swift; sourceTree = "<group>"; };
+		C53B1CB827DA426E006C50B1 /* ListService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListService.swift; sourceTree = "<group>"; };
+		C53B1CBA27DA4366006C50B1 /* ListServiceRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListServiceRepository.swift; sourceTree = "<group>"; };
+		C53B1CBC27DA4442006C50B1 /* List.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = List.swift; sourceTree = "<group>"; };
 		C5A0E6A427D8E7E50095A00D /* ListCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCoordinator.swift; sourceTree = "<group>"; };
 		C5A0E6A727D8EA4D0095A00D /* UIView+AutoLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+AutoLayout.swift"; sourceTree = "<group>"; };
 		C5A0E6A927D8EB300095A00D /* uiViewController+ChildrenExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "uiViewController+ChildrenExtension.swift"; sourceTree = "<group>"; };
@@ -94,11 +100,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		CA0F2D2527BFDD6D00BCA633 = {
+		C53B1CBE27E1FA89006C50B1 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
 				C53B1CB427DA1E37006C50B1 /* UIViewController+Children.swift */,
-				C53B1CB227DA1DD0006C50B1 /* ListItem.swift */,
+				C5A0E6A927D8EB300095A00D /* uiViewController+ChildrenExtension.swift */,
+				C5A0E6A727D8EA4D0095A00D /* UIView+AutoLayout.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		CA0F2D2527BFDD6D00BCA633 = {
+			isa = PBXGroup;
+			children = (
 				CA0F2D4727BFDD6E00BCA633 /* TodoAppTests */,
 				CA0F2D5127BFDD6E00BCA633 /* TodoAppUITests */,
 				CA0F2D2F27BFDD6D00BCA633 /* Products */,
@@ -119,8 +133,7 @@
 		CA0F2D3027BFDD6D00BCA633 /* TodoApp */ = {
 			isa = PBXGroup;
 			children = (
-				C5A0E6A927D8EB300095A00D /* uiViewController+ChildrenExtension.swift */,
-				C5A0E6A727D8EA4D0095A00D /* UIView+AutoLayout.swift */,
+				C53B1CBE27E1FA89006C50B1 /* Extensions */,
 				CA0F2D3F27BFDD6E00BCA633 /* Info.plist */,
 				CA0F2D3C27BFDD6E00BCA633 /* LaunchScreen.storyboard */,
 				CA0F2D3327BFDD6D00BCA633 /* SceneDelegate.swift */,
@@ -168,6 +181,12 @@
 		CA0F2D6227BFDDF900BCA633 /* View Models */ = {
 			isa = PBXGroup;
 			children = (
+				C5A0E6A427D8E7E50095A00D /* ListCoordinator.swift */,
+				C5A0E6AB27D8EBCB0095A00D /* ListViewController.swift */,
+				C53B1CB627DA4000006C50B1 /* ListViewModelProtocol.swift */,
+				C53B1CB827DA426E006C50B1 /* ListService.swift */,
+				C53B1CBA27DA4366006C50B1 /* ListServiceRepository.swift */,
+				C53B1CBC27DA4442006C50B1 /* List.swift */,
 			);
 			path = "View Models";
 			sourceTree = "<group>";
@@ -189,7 +208,6 @@
 		CA0F2D6527BFDE0F00BCA633 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				C5A0E6AB27D8EBCB0095A00D /* ListViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -197,7 +215,6 @@
 		CA0F2D6627BFDE1700BCA633 /* Coordinators */ = {
 			isa = PBXGroup;
 			children = (
-				C5A0E6A427D8E7E50095A00D /* ListCoordinator.swift */,
 			);
 			path = Coordinators;
 			sourceTree = "<group>";
@@ -332,16 +349,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C53B1CB327DA1DD0006C50B1 /* ListItem.swift in Sources */,
 				CA0F2D6827BFDEC300BCA633 /* AppContext.swift in Sources */,
 				C5A0E6A827D8EA4D0095A00D /* UIView+AutoLayout.swift in Sources */,
 				CA0F2D3227BFDD6D00BCA633 /* AppDelegate.swift in Sources */,
 				CA0F2D6C27BFDEF200BCA633 /* ViewControllerFactory.swift in Sources */,
 				C53B1CB527DA1E37006C50B1 /* UIViewController+Children.swift in Sources */,
 				CA0F2D3427BFDD6D00BCA633 /* SceneDelegate.swift in Sources */,
+				C53B1CBB27DA4366006C50B1 /* ListServiceRepository.swift in Sources */,
 				C5A0E6AC27D8EBCB0095A00D /* ListViewController.swift in Sources */,
 				CA346AF627BFDF78007BA151 /* ServiceContainer.swift in Sources */,
+				C53B1CB927DA426E006C50B1 /* ListService.swift in Sources */,
 				CA0F2D6A27BFDED800BCA633 /* CoordinatorFactory.swift in Sources */,
+				C53B1CB727DA4000006C50B1 /* ListViewModelProtocol.swift in Sources */,
+				C53B1CBD27DA4442006C50B1 /* List.swift in Sources */,
 				C53B1CAD27D8EEEC006C50B1 /* ListCoordinator.swift in Sources */,
 				CA346AF427BFDF5C007BA151 /* ViewModelFactory.swift in Sources */,
 				CA346AF827BFDF96007BA151 /* DataAccessContainer.swift in Sources */,
